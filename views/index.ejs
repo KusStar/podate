@@ -1,0 +1,36 @@
+<meta charset="UTF-8">
+<title>Podate Logs</title>
+<style>
+  body {
+    padding-top: 50px;
+    background: #000;
+    color: #fff;
+    padding: 4rem;
+  }
+  .window {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    border: 1px solid #eee;
+    border-radius: 1rem;
+  }
+  p {
+    margin: 0;
+  }
+</style>
+<script>
+  setTimeout(() => {
+    location.reload()
+  }, 3000)
+</script>
+
+<body>
+  <div class="window">
+    <% for(var i=0; i < data.length; i++) { %>
+      <p>
+        <%= data[i] %>
+      </p>
+      <% } %>
+  </div>
+</body>
