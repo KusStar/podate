@@ -26,10 +26,10 @@ module.exports = {
     name   : "podate",
     script : "./server.js",
     env: {
-      PODATE_TOKEN: "podate",
+      PODATE_TOKEN: "Bearer podate",
     },
     env_production: {
-      PODATE_TOKEN: "podate",
+      PODATE_TOKEN: "Bearer podate",
     }
   }]
 }
