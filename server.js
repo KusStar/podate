@@ -7,7 +7,7 @@ const { exec } = require('child_process')
 console.log('env token', process.env.PODATE_TOKEN)
 
 // Constants
-const PORT = 9999;
+const PORT = process.env.PORT || 9999;
 const HOST = '0.0.0.0';
 
 // App
@@ -31,7 +31,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/hook', (req, res) => {
-  if (req.headers.authorization !== process.env.PODATE_TOKEN) {
+  if (process.env.PODATE_TOKEN && req.headers.authorization !== process.env.PODATE_TOKEN) {
     return res.status(403).send('Err: Unauthorization!')
   }
 
