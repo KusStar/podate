@@ -45,7 +45,7 @@ app.get('/hook', (req, res) => {
   stdout.on('end', () => {
     logs.push('\n')
   })
-  res.status(200).send('triggered auto-update');
+  res.status(200).send('triggered auto-update\n');
 });
 
 app.listen(PORT, HOST, () => {
