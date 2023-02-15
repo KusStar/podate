@@ -22,10 +22,10 @@ module.exports = {
     name   : "podate",
     script : "./server.js",
     env: {
-      PODATE_TOKEN: "xiangyun",
+      PODATE_TOKEN: "podate",
     },
     env_production: {
-      PODATE_TOKEN: "xiangyun",
+      PODATE_TOKEN: "podate",
     }
   }]
 }
