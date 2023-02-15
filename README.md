@@ -9,6 +9,10 @@
 Recommend use [pm2](https://pm2.keymetrics.io/) to manage your sever process.
 
 ```console
+# Clone the repo
+$ git clone https://github.com/KusStar/podate
+$ cd podate
+# Run
 $ export PODATE_TOKEN="Bearer podate"
 $ pm2 start server.js
 ```
