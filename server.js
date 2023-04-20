@@ -16,12 +16,12 @@ const app = express();
 app.set('view engine', 'ejs')
 
 const log = (...args) => {
-  const msgs = [`[${new Date().toLocaleTimeString()}]`, ...args]
+  const msgs = [`[${new Date().toLocaleString()}]`, ...args]
   console.log(...msgs)
   logs.push(msgs.join(' '))
 }
 
-const logs = []
+let logs = []
 
 log('LOG STARTED')
 log('LISTENING...')
@@ -47,6 +47,11 @@ app.get('/hook', (req, res) => {
   })
   res.status(200).send('triggered auto-update\n');
 });
+
+app.get('/clear', (req, res) => {
+  logs = []
+  res.status(200).send('logs cleared!\n');
+})
 
 app.listen(PORT, HOST, () => {
   console.log(`Running on http://${HOST}:${PORT}`);
